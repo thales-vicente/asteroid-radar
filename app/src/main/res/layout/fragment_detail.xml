@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailFragment">
+
+
+    <ImageView
+        android:id="@+id/iv_detailImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/img_example" />
+
+    <TextView
+        android:id="@+id/tv_potentiallyHazardous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Potentially Hazardous"
+        android:textSize="24sp"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_detailImage"/>
+
+    <TextView
+        android:id="@+id/tv_closeApproachDate"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_potentiallyHazardous"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:text="Close approach date"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_closeApproachDate"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="2020-02-08"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_absoluteMagnitude"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date"
+        app:layout_constraintStart_toStartOf="@id/tv_date"
+        android:text="Absolute magnitude"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_magnitude"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_absoluteMagnitude"
+        app:layout_constraintStart_toStartOf="@+id/tv_absoluteMagnitude"
+        tools:text="19.900000 au"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_estimatedDiameter"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_magnitude"
+        app:layout_constraintStart_toStartOf="@+id/tv_magnitude"
+        android:text="Estimated diameter"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_diameter"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_estimatedDiameter"
+        app:layout_constraintStart_toStartOf="@+id/tv_estimatedDiameter"
+        tools:text="0.622358 km"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_relativeVelocity"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_diameter"
+        app:layout_constraintStart_toStartOf="@+id/tv_diameter"
+        android:text="Relative velocity"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_velocity"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_relativeVelocity"
+        app:layout_constraintStart_toStartOf="@+id/tv_relativeVelocity"
+        tools:text="15.515735 km/s"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_distanceFromEarth"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_velocity"
+        app:layout_constraintStart_toStartOf="@+id/tv_velocity"
+        android:text="Distance from earth"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_distanceFromEarth"
+        app:layout_constraintStart_toStartOf="@id/tv_distanceFromEarth"
+        tools:text="0.445338 au"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/iv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_info"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="24dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
