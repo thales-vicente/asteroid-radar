@@ -2,6 +2,12 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-parcelize")
+    id ("androidx.navigation.safeargs.kotlin")
+    kotlin("plugin.serialization") version "2.1.10"
+    id ("com.google.dagger.hilt.android")
+    id("kotlin-kapt")
+
 }
 
 android {
@@ -52,16 +58,36 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.retrofit)
-    implementation(libs.moshi)
     implementation(libs.coil)
+    implementation(libs.converter.moshi)
+    implementation(libs.moshi)
     implementation(libs.coil.network.okhttp)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.converter.scalars)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.squareup.converter.gson)
     testImplementation(libs.junit)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.retrofit2.kotlinx.serialization.converter)
+    implementation(libs.logging.interceptor)
+    implementation(libs.room)
+    implementation(libs.room.ktx)
+    implementation(libs.work.runtime)
+    implementation(libs.hilt.android)
+    kapt ("com.google.dagger:hilt-compiler:2.51.1")
+    implementation("androidx.room:room-ktx:2.5.2")
+    kapt("androidx.room:room-compiler:2.5.2")
+
+
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+}
+kapt{
+    correctErrorTypes = true
 }

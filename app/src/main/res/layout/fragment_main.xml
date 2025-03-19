@@ -8,6 +8,7 @@
     tools:context=".MainFragment">
 
     <ImageView
+        android:contentDescription="image of space from NASA"
         android:id="@+id/iv_imageOfTheDay"
         tools:src="@drawable/img_example"
         android:layout_width="match_parent"
@@ -28,11 +29,14 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        tools:itemCount="10"
+        android:id="@+id/rv_recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@+id/iv_imageOfTheDay"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/asteroid_item"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
